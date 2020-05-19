@@ -95,14 +95,14 @@ class App extends Component {
                         </thead>
                         <tbody>
                             {
-                              this.state.csvData.slice(this.state.minValIndex, this.state.maxValIndex).map((something, index) => {
+                              this.state.csvData.slice(this.state.minValIndex, this.state.maxValIndex).map((row, index) => {
                                 return(
                                 <tr key={index}>
                                   {
-                                    Object.keys(something).map((anotherKey, index) => {
+                                    Object.keys(row).map((column, index) => {
                                       return(
                                         <td key={index}>
-                                          {something[anotherKey]}
+                                          {row[column]}
                                         </td>
                                       )
                                     })
